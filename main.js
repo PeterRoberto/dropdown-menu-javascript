@@ -79,9 +79,18 @@
     function listOption(resultItens) {
         var createOption = document.createElement('option');
         var optionText = document.createTextNode(resultItens.textContent);
+        
         createOption.appendChild(optionText);
         createOption.setAttribute('value', resultItens.textContent);
+
         select.appendChild(createOption);
+
+        
+
+            
     }
+
+
+
 
 })();

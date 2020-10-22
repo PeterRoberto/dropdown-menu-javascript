@@ -42,14 +42,42 @@
 
       <div class="container">
         <div class="row">
-          <div class="col-xl-12">
-            <div class="box-fields">
-              <input type="text" placeholder="Nome do item de menu" value="" class="nome-item">
-              <input type="text" placeholder="Cole seu link do novo item" value="" class="link-item">
-              <select class="selectCodePen"> </select>
-              <button class="btn-click">Enviar</button>
+
+          <div class="col-xl-6">
+            <div class="row">
+
+              <div class="form-group col-xl-6">
+                <label>Nome</label>
+                <input type="text" class="form-control nome-item" placeholder="Nome do menu">
+              </div>
+              <div class="form-group col-xl-6">
+                <label>Link do menu</label>
+                <input type="text" class="form-control link-item" placeholder="Link do menu">
+              </div>
             </div>
           </div>
+
+          <div class="col-xl-3">
+            <div class="form-group">
+              <label>Escolha o item pai</label>
+              <select class="custom-select selectCodePen"  id="BusinessType"></select>
+              <!-- <script>
+                onchange="val()"
+                function val() {
+                  d = document.getElementById("select_id").value;
+                  alert(d); 
+                }
+                </script> -->
+            </div>
+          </div>
+
+
+          <div class="col-xl-2">
+            <div class="form-group box-btn">
+              <button type="button" class="btn btn-primary btn-lg btn-click btn-add">Adicione</button>
+            </div>
+          </div>
+              
         </div>
       </div>
 
