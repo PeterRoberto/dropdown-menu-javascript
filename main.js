@@ -56,7 +56,6 @@
     var select = document.querySelector('.selectCodePen');
 
      
-
     btnGetValues.addEventListener('click', getInputs);
     function getInputs() {
         nomeItem.value;
@@ -66,7 +65,6 @@
     }
     
    
-
     function listItensMenu() {  
         for(var i = 0; i < itemMenu.length; i++) { 
             var result = itemMenu[i];   
@@ -79,18 +77,28 @@
     function listOption(resultItens) {
         var createOption = document.createElement('option');
         var optionText = document.createTextNode(resultItens.textContent);
-        
         createOption.appendChild(optionText);
         createOption.setAttribute('value', resultItens.textContent);
-
         select.appendChild(createOption);
 
-        
+        select.addEventListener('change', (event) => {
+            const result = document.querySelector('.result');
+            result.textContent = `Você escolheu: ${event.target.value}`;
+            // console.log(resultItens);
 
-            
+            if(resultItens.textContent == event.target.value) {
+                var itemEscolhido = resultItens;
+                montarDropdown(itemEscolhido);
+            }
+        });       
     }
 
 
+
+    function montarDropdown(item) {
+        console.log(item);     
+        item.parentNode.classList.add("has-dropdown");  
+    } 
 
 
 })();
